@@ -98,7 +98,7 @@ Terminal=false
 
 convert ${TARGET_DIR}/autopsy-4.22.1/icon.ico autopsy.png
 mv autopsy-0.png Autopsy.AppDir/autopsy.png
-rm -f rm -f autopsy-?.png
+rm -f autopsy-?.png
 
 rm -f Autopsy-x86_64.AppImage
 ARCH=x86_64 ./appimagetool-x86_64.AppImage Autopsy.AppDir
