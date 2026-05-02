@@ -53,7 +53,7 @@ chmod +x build_appimage.sh
 ---
 
 ## Requirements
-* **FUSE**: Needed to run AppImages on most modern distributions (e.g., ``sudo apt install libfuse2`` on newer Ubuntu/Debian).
+* **FUSE**: Needed to run AppImages on most modern distributions (e.g., ``sudo apt install fuse3`` on newer Ubuntu/Debian).
 
 ---
 
