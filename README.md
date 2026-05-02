@@ -45,7 +45,7 @@ If you prefer to build the AppImage yourself on a Debian-based system (like Ubun
 
 ```bash
 git clone https://github.com/jeiks/Autopsy-AppImage.git
-cd autopsy-appimage
+cd Autopsy-AppImage/
 chmod +x build_appimage.sh
 ./build_appimage.sh
 ```
