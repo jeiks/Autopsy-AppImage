@@ -44,7 +44,7 @@ This project aims to simplify the process for the community by providing:
 If you prefer to build the AppImage yourself on a Debian-based system (like Ubuntu or Debian Trixie), use the provided script:
 
 ```bash
-git clone [https://github.com/jeiks/autopsy-appimage.git](https://github.com/jeiks/autopsy-appimage.git)
+git clone https://github.com/jeiks/Autopsy-AppImage.git
 cd autopsy-appimage
 chmod +x build_appimage.sh
 ./build_appimage.sh
