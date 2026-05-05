@@ -33,7 +33,7 @@ fi
 mkdir debs
 cd debs
 #libde265-dev libheif-dev libpq-dev libafflib-dev libewf-dev libvhdi-dev libvmdk-dev libvslvm-dev 
-apt download libde265-0 libheif1 libpq5 libjpeg62-turbo libafflib0t64 libafflib0v5 libewf2 libvhdi1 libvmdk1 libvslvm1t64 libvslvm1 testdisk libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+apt download libbfio1 libde265-0 libheif1 libpq5 libjpeg62-turbo libafflib0t64 libewf2 libvhdi1 libvmdk1 libvslvm1t64 testdisk libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
 #for i in *.deb;do apt-cache depends -i ${i%%_*} | awk '/Depends:/ {print $2}' | xargs apt download;done
 #rm -f *-dev*
 cd ..
@@ -61,6 +61,8 @@ chmod -R a+x ${TARGET_DIR}/autopsy-4.22.1/autopsy/solr/bin
 chmod a+x ${TARGET_DIR}/autopsy-4.22.1/bin/autopsy
 dos2unix ${TARGET_DIR}/autopsy-4.22.1/etc/autopsy.conf
 echo 'jdkhome=""' >> ${TARGET_DIR}/autopsy-4.22.1/etc/autopsy.conf
+cp ${TARGET_DIR}/libs/sleuthkit-4.14.0.jar ${TARGET_DIR}/autopsy-4.22.1/autopsy/modules/ext/sleuthkit-4.14.0.jar
+cp ${TARGET_DIR}/libs/sleuthkit-caseuco-4.14.0.jar ${TARGET_DIR}/autopsy-4.22.1/autopsy/modules/ext/sleuthkit-caseuco-4.14.0.jar
 
 find ${TARGET_DIR} -type f -name "*.dll" -delete
 find ${TARGET_DIR} -type f -name "*.exe" -delete
